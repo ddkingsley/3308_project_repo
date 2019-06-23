@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
+
     <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        
         {% if title %}
         <title>{{ title }} - Kismet</title>
         {% else %}
         <title>Welcome to Kismet!</title>
         {% endif %}
     </head>
+
     <body>
         <div>
         <a href="{{ url_for('index') }}">Home</a>
         <a href="{{ url_for('cookie') }}">Fortune Cookie</a>
+        <p>lalalalalalalalala</p>
         </div>
         <hr>
         {% block content %}{% endblock %}
     </body>
+
 </html>
