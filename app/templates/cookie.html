@@ -1,11 +1,20 @@
 {% extends "base.html"  %}
 {% block content %}
-    <div id="cookie">
+
+    <div id="cookiePic">
         <img id="wholeCookie" src="{{url_for('static', filename='images/wholeCookie.jpg') }}"/>
     </div>
 
     <div class="fortune">
-    	<button onclick="showFortune()">Get Fortune</button>
-        <p id="fortune">{{fortune}}</p>
+    	<button id="fortuneButton" onclick="showFortune()">Get Fortune</button>
     </div>
+    
+    </div class="fortune">
+        <p id="theFortune">{{fortune}}</p>
+    </div>
+
+    <div class="fortune">
+    	<p id="luckyNumber">Your lucky number is {{luckyNumber}}</p>
+    </div>
+
 {% endblock %}

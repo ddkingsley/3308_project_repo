@@ -15,12 +15,12 @@ img {
 	padding-top: 2%;
 }
 
-.fortune{
+.fortune, #theFortune {
 	text-align:center;
 	font-size: 20px;
 }
 
-#fortune {
+#theFortune, #luckyNumber {
 	display: none;
 }
 

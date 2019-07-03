@@ -10,10 +10,11 @@ def index():
     user = {'username': 'The Class'}   
     return render_template('index.html', user=user)
 
-@app.route('/cookie/')
+@app.route('/cookie', methods = ['POST', 'GET'])
 def cookie():
     fortune = getAFortune()
-    return render_template('cookie.html', fortune=fortune)
+    luckyNumber = random.randint(1,100)
+    return render_template('cookie.html', fortune=fortune, luckyNumber=luckyNumber)
 
 @app.route('/mystic9ball')
 def mystic9ball():
@@ -31,3 +32,4 @@ def genie():
 @app.route('/Mood Ring')
 def moodRing():
 	return render_template('mood.html')
+
