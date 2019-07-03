@@ -122,7 +122,7 @@ wealthFortune = ["Python programmers are billionaires. Become a Python programme
                  "Find work you love"
                 ]
 
-# this function prints a line onpersonality traits based on zodiac element (water, air, fire or earth)
+# this function prints a line with personality traits based on zodiac element (water, air, fire or earth)
 def horoscopeTraits(sign):
         
     if sign == "Aries" or "Leo" or "Sagittarius":
@@ -138,7 +138,7 @@ def horoscopeTraits(sign):
         print("You are a", random.choice(adverbs), random.choice(waterTraits), "person, with a love for", random.choice(loveFor))
 
 
-# this function gets wealth, health, or love fortunes
+# this function gets wealth, health, love fortunes, or personality traits
 def horoscopeFortuneGenerator(sign):
 
     fortune = (input("Love, Health, Wealth, or Describe Me?")).lower()
