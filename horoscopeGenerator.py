@@ -126,16 +126,16 @@ wealthFortune = ["Python programmers are billionaires. Become a Python programme
 def horoscopeTraits(sign):
         
     if sign == "Aries" or "Leo" or "Sagittarius":
-        print("You are a", random.choice(adverbs), random.choice(fireTraits), "person, with a love for", random.choice(loveFor))
+        print("You are", random.choice(adverbs), random.choice(fireTraits), "person, with a love for", random.choice(loveFor))
 
     elif sign == "Taurus" or "Virgo" or "Capricorn":
         print("You are", random.choice(adverbs), random.choice(earthTraits), "person, with a love for", random.choice(loveFor))
 
     elif sign == "Gemini" or "Libra" or "Aquarius": 
-        print("You are a", random.choice(adverbs), random.choice(airTraits), "person, with a love for", random.choice(loveFor))
+        print("You are", random.choice(adverbs), random.choice(airTraits), "person, with a love for", random.choice(loveFor))
 
     elif sign == "Scorpio" or "Cancer" or "Pisces":
-        print("You are a", random.choice(adverbs), random.choice(waterTraits), "person, with a love for", random.choice(loveFor))
+        print("You are", random.choice(adverbs), random.choice(waterTraits), "person, with a love for", random.choice(loveFor))
 
 
 # this function gets wealth, health, love fortunes, or personality traits
@@ -159,7 +159,6 @@ def horoscopeFortuneGenerator(sign):
 def driver(sign):
     
     horoscopeFortuneGenerator(sign)
-    
     more=True
     
     while (more == True):
