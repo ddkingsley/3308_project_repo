@@ -17,7 +17,7 @@ def cookie():
 
 @app.route('/mystic9ball')
 def mystic9ball():
-	randomFortunes = ('you gonna be poor', 'you gonna be rich')
+	randomFortunes = ('you gonna be very rich', 'you gonna be rich')
 	return(random.choice(randomFortunes))
 
 @app.route('/Horoscope')
@@ -30,5 +30,4 @@ def genie():
 
 @app.route('/Mood Ring')
 def moodRing():
-	randomMood = ('good mood', 'bad mood')
-	return(random.choice(randomMood))
+	return render_template('mood.html')
