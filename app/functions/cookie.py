@@ -1,2 +1,5 @@
+import random
+
 def getAFortune():
-	return('here is the fortune from the cookie module')
+	listOfFortunes = ('fortune1', 'fortune2', 'fortune3', 'fortune4')
+	return(random.choice(listOfFortunes))
