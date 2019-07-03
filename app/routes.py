@@ -12,7 +12,7 @@ def index():
 
 @app.route('/cookie/')
 def cookie():
-    fortune = {'theFortune' : getAFortune()}
+    fortune = getAFortune()
     return render_template('cookie.html', fortune=fortune)
 
 @app.route('/mystic9ball')
