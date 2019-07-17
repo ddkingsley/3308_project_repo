@@ -13,14 +13,24 @@
 
     <body>
         <div>
+        {% if g.user %}
         <a href="{{ url_for('index') }}">Home</a>
-        <a href="{{ url_for('cookie') }}">Fortune Cookie</a>
-        <a href="{{ url_for('mystic9ball') }}">Mystic 9 Ball</a>
-        <a href="{{ url_for('horoscope') }}">Horoscope</a>
-        <a href="{{ url_for('genie') }}">Genie</a>
-        <a href="{{ url_for('moodRing') }}">Mood Ring</a>
+        <a href="{{ url_for('routes.cookie') }}">Fortune Cookie</a>
+        <a href="{{ url_for('routes.mystic9ball') }}">Mystic 9 Ball</a>
+        <a href="{{ url_for('routes.horoscope') }}">Horoscope</a>
+        <a href="{{ url_for('routes.genie') }}">Genie</a>
+        <a href="{{ url_for('routes.moodRing') }}">Mood Ring</a>
+        <a href="{{ url_for('auth.logout') }}">Log Out</a>
+        {% else %}
+        <a href="{{ url_for('auth.register') }}">Register</a>
+        <a href="{{ url_for('auth.login') }}">Log In</a>
+        {% endif %}
         </div>
         <hr>
+        {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+        {% endfor %}
+        
         {% block content %}{% endblock %}
         
         <script type="text/javascript" src="{{url_for('static', filename='js/cookie.js') }}"></script>
