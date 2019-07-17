@@ -1,1 +1,9 @@
 .DS_Store
+venvIMAC/
+venv/
+instance/
+herokuKeys.pub
+herokuKeys
+app/functions/__pycache__/
+app/__pycache__/
+ __pycache__
