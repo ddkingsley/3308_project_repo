@@ -11,15 +11,17 @@ bp = Blueprint('routes', __name__)
 @bp.route('/')
 @bp.route('/index')
 def index():
-    user_id = 'Guest'
-    return render_template('index.html',user=user_id)
+    if g.user:
+        user = session['username']
+    else:
+        user = 'New Person'
+    return render_template('index.html',user=user)
 
 @bp.route('/cookie', methods = ['GET'])
 @login_required
 def cookie():
     fortune = getAFortune()
     luckyNumber = getALuckyNumber()
-    luckyNumber = g.user
     return render_template('cookie.html', title='Fortune Cookie', fortune=fortune, luckyNumber=luckyNumber)
 
 @bp.route('/mystic9ball')
