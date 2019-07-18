@@ -32,7 +32,6 @@ def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        sign = request.form['signs']
         db = get_db()
         user = db.execute('SELECT * FROM user WHERE username = ?', (username,)).fetchone()
 
@@ -44,7 +43,6 @@ def login():
             session.clear()
             session['user_id'] = user['id']
             session['username'] = username
-            session['sign'] = sign
             return redirect(url_for('index'))
 
         flash(error)
