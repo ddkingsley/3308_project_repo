@@ -2,7 +2,7 @@ from flask import render_template
 from flask import url_for
 from app import app
 import random
-from app.functions.cookie import getAFortune
+from app.functions.cookie import getAFortune, getLuckyNumbers
 
 @app.route('/')
 @app.route('/index')
@@ -13,7 +13,7 @@ def index():
 @app.route('/cookie', methods = ['POST', 'GET'])
 def cookie():
     fortune = getAFortune()
-    luckyNumber = random.randint(1,100)
+    luckyNumber = getLuckyNumbers()
     return render_template('cookie.html', fortune=fortune, luckyNumber=luckyNumber)
 
 @app.route('/mystic9ball')
