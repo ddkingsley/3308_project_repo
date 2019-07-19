@@ -1,5 +1,4 @@
-from flask import render_template
-from flask import url_for
+from flask import url_for, request, redirect, render_template
 from app import app
 import random
 from app.functions.cookie import getAFortune, getLuckyNumbers
