@@ -17,5 +17,4 @@ def getLuckyNumbers():
 		numstring = numstring + str(i) + " "
 	return numstring
 
-print(getLuckyNumbers())
 
