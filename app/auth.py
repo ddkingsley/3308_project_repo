@@ -12,13 +12,13 @@ def register():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        sign = request.form['signs']
+        zodiac = request.form['zodiac']
         db = get_db()
 
         if db.execute('SELECT id FROM user WHERE username = ?', (username,)).fetchone() is not None:
             error = 'Username ' + str(username) + ' is already registered'
         else:
-            db.execute('INSERT INTO user (username, password) VALUES (?, ?)',(username, generate_password_hash(password)))
+            db.execute('INSERT INTO user (username, password, zodiac) VALUES (?, ?, ?)',(username, generate_password_hash(password), zodiac))
             db.commit()
             return redirect(url_for('auth.login'))
 
@@ -42,7 +42,8 @@ def login():
         else:
             session.clear()
             session['user_id'] = user['id']
-            session['username'] = username
+            session['username'] = user['username']
+            session['zodiac'] = user['zodiac']
             return redirect(url_for('index'))
 
         flash(error)

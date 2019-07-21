@@ -13,18 +13,18 @@
 
     <body>
         <div>
-        {% if g.user %}
         <a href="{{ url_for('index') }}">Home</a>
         <a href="{{ url_for('routes.cookie') }}">Fortune Cookie</a>
         <a href="{{ url_for('routes.mystic9ball') }}">Mystic 9 Ball</a>
         <a href="{{ url_for('routes.horoscope') }}">Horoscope</a>
         <a href="{{ url_for('routes.genie') }}">Genie</a>
         <a href="{{ url_for('routes.moodRing') }}">Mood Ring</a>
+        {% if g.user %}
         <a href="{{ url_for('auth.logout') }}">Log Out</a>
-        {% else %}
+        {% else %} 
         <a href="{{ url_for('auth.register') }}">Register</a>
         <a href="{{ url_for('auth.login') }}">Log In</a>
-        {% endif %}
+        {% endif %} 
         </div>
         <hr>
         {% for message in get_flashed_messages() %}

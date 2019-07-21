@@ -2,4 +2,9 @@
 
 {% block content %}
     <h1>Hello, {{ user }}, this is the homepage!</h1>
+    {% if g.user %}
+    <h2>Your zodiac sign is {{ zodiac }}</h2>
+    {% else %}
+    <h2>{{ zodiac }}</h2>
+    {% endif %}
 {% endblock %}
