@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-from flask import url_for, request, redirect, render_template
-from app import app
 import random
+
+from flask import url_for, request, redirect, render_template, Blueprint, g, session
+
 from app.functions.cookie import getAFortune, getLuckyNumbers
-=======
-import random
->>>>>>> login
-
-from flask import Blueprint, g, render_template, session
-
-from app.functions.cookie import getAFortune, getALuckyNumber
 from app.auth import login_required
 from app.db import get_db
 
@@ -30,13 +23,8 @@ def index():
 #@login_required
 def cookie():
     fortune = getAFortune()
-<<<<<<< HEAD
     luckyNumber = getLuckyNumbers()
     return render_template('cookie.html', fortune=fortune, luckyNumber=luckyNumber)
-=======
-    luckyNumber = getALuckyNumber()
-    return render_template('cookie.html', title='Fortune Cookie', fortune=fortune, luckyNumber=luckyNumber)
->>>>>>> login
 
 @bp.route('/mystic9ball')
 #@login_required

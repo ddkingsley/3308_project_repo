@@ -5,7 +5,6 @@ def getAFortune():
 	fortune = random.choice(fortuneList)
 	return fortune
 
-<<<<<<< HEAD
 def getLuckyNumbers():
 	numlist = []
 	for i in range(5):
@@ -19,8 +18,3 @@ def getLuckyNumbers():
 	return numstring
 
 
-=======
-def getALuckyNumber():
-	luckyNumber = random.randint(1,100)
-	return luckyNumber
->>>>>>> login
