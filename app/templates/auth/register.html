@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Register</h1>
+  <form method="post">
+    <label for="username">Username</label>
+    <input name="username" id="username" required> <br>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required><br>
+    <input type="radio" name="zodiac" value="aquarius" required>Aquarius<br>
+    <input type="radio" name="zodiac" value="pisces" required>Pisces<br>
+    <input type="radio" name="zodiac" value="aries" required>Aries<br>
+    <input type="radio" name="zodiac" value="taurus" required>Taurus<br>
+    <input type="radio" name="zodiac" value="gemini" required>Gemini<br>
+    <input type="radio" name="zodiac" value="cancer" required>Cancer<br>
+    <input type="radio" name="zodiac" value="leo" required>Leo<br>
+    <input type="radio" name="zodiac" value="virgo" required>Virgo<br>
+    <input type="radio" name="zodiac" value="libra" required>Libra<br>
+    <input type="radio" name="zodiac" value="scorpio" required>Scorpio<br>
+    <input type="radio" name="zodiac" value="sagittarius" required>Sagittarius<br>
+    <input type="radio" name="zodiac" value="capricorn" required>Capricorn<br>
+    <input type="submit" value="Register">
+  </form>
+{% endblock %}
