@@ -8,7 +8,7 @@
 
 Florencia Cabral<br/> Gregory Giordano<br/> Kristin Kernler<br/> Daniel Kingsley<br/> Carter Reid
 
-###Automated Test Cases
+### Automated Test Cases
 
 **Fortune Cookie tests:**
 The Fortune Cookie tests are designed around the random output of the fortune cookie feature.
@@ -22,4 +22,4 @@ To run the tests, simply cd into the app/functions directory and run test_cookie
 
 
 
-###User Acceptance Testing
+### User Acceptance Testing
