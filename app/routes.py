@@ -1,35 +1,49 @@
-from flask import render_template
-from flask import url_for
-from app import app
 import random
-from app.functions.cookie import getAFortune
 
-@app.route('/')
-@app.route('/index')
+from flask import url_for, request, redirect, render_template, Blueprint, g, session
+
+from app.functions.cookie import getAFortune, getLuckyNumbers
+from app.auth import login_required
+from app.db import get_db
+
+bp = Blueprint('routes', __name__)
+
+@bp.route('/')
+@bp.route('/index')
 def index():
-    user = {'username': 'The Class'}   
-    return render_template('index.html', user=user)
+    if g.user:
+        user = session['username']
+        zodiac = session['zodiac']
+    else:
+        user = 'New Person'
+        zodiac = 'Register an account for zodiac information'
+    return render_template('index.html',user=user, zodiac=zodiac)
 
-@app.route('/cookie', methods = ['POST', 'GET'])
+@bp.route('/cookie', methods = ['GET'])
+#@login_required
 def cookie():
     fortune = getAFortune()
-    luckyNumber = random.randint(1,100)
+    luckyNumber = getLuckyNumbers()
     return render_template('cookie.html', fortune=fortune, luckyNumber=luckyNumber)
 
-@app.route('/mystic9ball')
+@bp.route('/mystic9ball')
+#@login_required
 def mystic9ball():
 	randomFortunes = ('you gonna be very rich', 'you gonna be rich')
 	return(random.choice(randomFortunes))
 
-@app.route('/Horoscope')
+@bp.route('/Horoscope')
+#@login_required
 def horoscope():
 	return('this is your horoscope')
 
-@app.route('/Genie')
+@bp.route('/Genie')
+#@login_required
 def genie():
     return('make a wish!')
 
-@app.route('/Mood Ring')
+@bp.route('/Mood Ring')
+#@login_required
 def moodRing():
-	return render_template('mood.html')
+	return render_template('mood.html', title = 'Mood Ring')
 

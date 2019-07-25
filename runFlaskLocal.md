@@ -4,7 +4,7 @@ git clone https://github.com/ddkingsley/3308_project_repo.git
 ## cd into project repo
 cd 3308_project_repo
 
-
+#######################################
 # Mac:
 ## install venv, creates venv folder
 python3 -m venv venv
@@ -18,7 +18,7 @@ pip install -r requirements.txt
 ## run flask locally
 flask run
 
-
+########################################
 # Windows
 ## install venv, creates venv folder
 python3 -m venv venv
@@ -31,3 +31,8 @@ pip install -r requirements.txt
 
 ## run flask locally
 flask run
+
+#########################################
+# Initialize local database
+flask init-db
+
