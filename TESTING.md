@@ -109,7 +109,7 @@ Test case Executed by: ______________
 |------------|------------------------------------------------------------------|----------------------------------------------------|---------------------|-----------------|----------------------|
 |    1    |    Go to kismet website at: https://kismet3308.herokuapp.com/    |    Kismet home page loads and greets user    |         |         |         |
 |    2    |    Click on the “mood ring” link at the top of the page    |    User is taken to the mood ring page    |         |         |         |
-|    3    |    Observe the image in the screen as it changes colors.    |    Image on screen changes colors continuously     |         |         |         |
+|    3    |    Click on the "Tell Me My Mood" button    |    Ring changes colors and current mood is displayed    |         |         |         |
 Pass/Fail______Initial & Date______
 
 ### Test 7: Register/Login
