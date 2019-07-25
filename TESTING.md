@@ -85,7 +85,9 @@ Test case Executed by: ______________
 |------------|------------------------------------------------------------------|----------------------------------------------|---------------------|-----------------|----------------------|
 |    1    |    Go to kismet website at: https://kismet3308.herokuapp.com/    |    Kismet home page loads and greets user    |         |         |         |
 |    2    |    Click on the “Horoscope” link at the top of the screen    |    Horoscope page loads    |         |         |         |
-|    3    |    TODO – get your horoscope somehow    |    User gets their horoscope    |         |         |         |
+|    3    |    Click on your Zodiac sign    |    User gets a personality trait line, and is asked what kind of fortune (s)he wants    |         |         |         |
+|    4    |    Click on a type of fortune    |    User gets a fortune of the kind selected, and is asked if (s)he wants another one    |         |         |         |
+|    5    |    Click on Yes or No    |    If Yes, page asks user to select a type of fortune. Return to Step 4    |         |         |         |
 Pass/Fail______ Initial & Date______
 
 ## Test 5: Genie
