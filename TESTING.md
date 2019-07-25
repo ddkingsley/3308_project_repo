@@ -20,6 +20,14 @@ The tests in this file test the getAFortune() and getLuckyNumbers() functions th
 
 To run the tests, simply cd into the app/functions directory and run test_cookie.py 
 
+**Horoscope Feature Tests:** 
+The Horoscope Generator tests verify that users get a string after making their selection of solar sign (personal traits sentence), and another string (fortune) after selecting a fortune type. It also checks that the fortune is the correct type, by verifying that it is found in the predicted file.
+
+Filename: test_horoscope.py 
+Path: /app/functions/test_horoscope.py
+
+The tests in this file test the horoscopeTraits() and horoscopeFortuneGenerator() functions that produce the horoscope output. Two tests check that the functions return an output of type string, with a length greater than 0. The second test checks that the fortune returned exists in the file that corresponds to the user selection. 
+To run the tests, cd into the app/functions directory and run test_horoscope.py
 
 
 ### User Acceptance Testing
