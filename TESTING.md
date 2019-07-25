@@ -40,7 +40,7 @@ To run the tests from highest level directory in terminal: ./tests/test_schema.p
 
 ### User Acceptance Testing
 
-## Test 1: Home page
+### Test 1: Home page
 Test case Author: Carter Reid
 
 Test case Executed by: ______________
@@ -52,7 +52,7 @@ Test case Executed by: ______________
 |    3       |    Click “Home” in the main menu at the top left of the screen         |    User is returned to the home page.                                            |                     |                 |                      |
 Pass/Fail_______ Initial & Date______
 
-## Test 2: Fortune Cookie
+### Test 2: Fortune Cookie
 Test case Author: Carter Reid
 
 Test case Executed by: ______________
@@ -64,7 +64,7 @@ Test case Executed by: ______________
 |    3    |    Click on the “get fortune” button    |    Fortune cookie image changes. Text is displayed with user’s fortune    |         |         |         |
 Pass/Fail_______ Initial & Date______
 
-## Test 3: Mystic 9 Ball
+### Test 3: Mystic 9 Ball
 Test case Author: Carter Reid
 
 Test case Executed by: ______________
@@ -76,7 +76,7 @@ Test case Executed by: ______________
 |    3    |    Click on “give me an answer”    |    Mystic 9 ball displays answer    |         |         |         |
 Pass/Fail______ Initial & Date______
 
-## Test 4: Horoscope
+### Test 4: Horoscope
 Test case Author: Carter Reid
 
 Test case Executed by: ______________
@@ -100,7 +100,7 @@ Test case Executed by: ______________
 |    3    |    User picks a turtle to race, and starts the race    |    Turtles race until 3 have finished. If user’s turtle won, then text   informs user that their wish will come true. Otherwise, user is told to play   again.    |         |         |         |
 Pass/Fail______ Initial & Date______
 
-## Test 6: Mood Ring
+### Test 6: Mood Ring
 Test case Author: Carter Reid
 
 Test case Executed by: ______________
@@ -112,7 +112,7 @@ Test case Executed by: ______________
 |    3    |    Observe the image in the screen as it changes colors.    |    Image on screen changes colors continuously     |         |         |         |
 Pass/Fail______Initial & Date______
 
-## Test 7: Register/Login
+### Test 7: Register/Login
 Test case Author: Carter Reid
 
 Test case Executed by: ______________
