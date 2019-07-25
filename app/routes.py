@@ -29,8 +29,7 @@ def cookie():
 @bp.route('/mystic9ball')
 #@login_required
 def mystic9ball():
-	randomFortunes = ('you gonna be very rich', 'you gonna be rich')
-	return(random.choice(randomFortunes))
+    return render_template('m9.html')
 
 @bp.route('/Horoscope')
 #@login_required
