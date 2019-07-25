@@ -6,8 +6,15 @@ window.onload = function() {
 }
 function get_answer() {
   const answer = document.getElementById("circle_text");
-  generate_answer()
-  answer.textContent = "Nein!";
+  answer.style.fontSize = "50px";
+  answer.textContent = generate_answer()
+  if (answer.textContent == mystic_answers[9]) {
+  	answer.style.fontSize = "40px";
+  }
+  if (answer.textContent == mystic_answers[7]) {
+  	answer.style.fontSize = "200px";
+  }
+  //answer.textContent = "Nein!";
   document.body.removeChild(answerButton)
   next = document.createElement('button')
   next.innerHTML = "Would you like to try again?";
@@ -16,6 +23,7 @@ function get_answer() {
 }
 function reset() {
   const answer = document.getElementById("circle_text");
+  answer.style.fontSize = "200px";
   answer.textContent = "9";
   document.body.removeChild(next)
   answerButton = document.createElement('button')
@@ -24,7 +32,7 @@ function reset() {
   answerButton.addEventListener('click', get_answer)
 }
 const mystic_answers = ["Better not tell you now", "Yes", "Definitly", "Maybe", "No, but you're on the right track", 
-"that's kind of a stupid question", "Your question was bad and you should feel bad", "42", "Nein!",
+"Not a chance!", "I guess so", "42", "Nein!", "I'm picking up on something involving carrots, are you sure you're concentrating hard enough?",
 "cosmic energies are telling me... no", "Does a bear deficate in the woods?", "I think you already know the answer"];
 function generate_answer() {
 	var answers_length = mystic_answers.length;
@@ -32,4 +40,5 @@ function generate_answer() {
 	//console.log(answers_length)
 	//console.log(random_answer_index)
 	//console.log(mystic_answers[random_answer_index])
+	return mystic_answers[random_answer_index]
 }

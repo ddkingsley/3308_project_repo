@@ -53,7 +53,7 @@ div#circle_text
 {
 	/* change font/size/etc here */
 	/*important to change font size when displaying real answers*/
-	font: 100px "Tahoma", Arial, Serif;	
+	font: 200px "Tahoma", Arial, Serif;	
 	text-align : center;
 	
 	/* vertical centering technique */
