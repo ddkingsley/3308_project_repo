@@ -39,6 +39,7 @@ To run the tests from highest level directory in terminal: ./tests/test_schema.p
 
 
 ### User Acceptance Testing
+
 ## Test 1: Home page
 Test case Author: Carter Reid
 
