@@ -29,5 +29,13 @@ Path: /app/functions/test_horoscope.py
 The tests in this file test the horoscopeTraits() and horoscopeFortuneGenerator() functions that produce the horoscope output. Two tests check that the functions return an output of type string, with a length greater than 0. The second test checks that the fortune returned exists in one of the files from where fortunes should be sourced. 
 To run the tests, cd into the app/functions directory and run test_horoscope.py
 
+**Schema Tests:**
+The schema tests test the schema file that serves as the basis of the database. They test inserts into a database that uses this schema, as well as the schema contraints unique and foreign key. The output should confirm that all 4 tests pass, or report any test failures.
+
+Filename: test_schema.py
+Path: /tests/test_schema.py
+
+To run the tests from highest level directory in terminal: ./tests/test_schema.py
+
 
 ### User Acceptance Testing
