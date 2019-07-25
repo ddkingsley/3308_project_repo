@@ -40,19 +40,19 @@ class TextprocTestCase(unittest.TestCase):
         
         found = False
         txtfile = file('loveFortunes.txt')
-        for line in datafile:
+        for line in txtfile:
             if fortune in line:
                 found = True
                 break
         
         txtfile = file('wealthFortunes.txt')
-        for line in datafile:
+        for line in txtfile:
             if fortune in line:
                 found = True
                 break
                 
         txtfile = file('healthFortunes.txt')
-        for line in datafile:
+        for line in txtfile:
             if fortune in line:
                 found = True
                 break
