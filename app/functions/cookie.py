@@ -1,7 +1,10 @@
 import random
 
-def getAFortune():
-	fortuneList = open("./Fortune_data.txt").readlines()
+def getAFortune(test=False):
+	if test:
+		fortuneList = open("./Fortune_data.txt").readlines()
+	else:
+		fortuneList = open("app/functions/Fortune_data.txt").readlines()
 	fortune = random.choice(fortuneList)
 	return fortune
 

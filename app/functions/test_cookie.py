@@ -21,8 +21,8 @@ class CookieTestCase(unittest.TestCase):
         pass
 
     def test_getAFortune(self):
-        fortune1 = cookie.getAFortune()
-        fortune2 = cookie.getAFortune()
+        fortune1 = cookie.getAFortune(True)
+        fortune2 = cookie.getAFortune(True)
         self.assertTrue(len(fortune1) > 0)
         self.assertTrue(len(fortune2) > 0)
         self.assertTrue(type(fortune1) is str)

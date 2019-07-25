@@ -21,7 +21,7 @@ class TextprocTestCase(unittest.TestCase):
     def tearDown(self):
         pass
 
-    """ test that the personal traits generator returns a string """
+    """ tests for the personal traits generator """
     def test_horoscopeTraits(self):
 
         traitsLine = horoscope.horoscopeTraits()
@@ -29,7 +29,7 @@ class TextprocTestCase(unittest.TestCase):
         self.assertTrue(len(traitsLine) > 0)
         
         
-    """ test that the fortunes generator returns a string """
+    """ tests for the fortune generator """
     def test_horoscopeFortuneGenerator(self):
 
         fortune = horoscope.horoscopeFortuneGenerator()
