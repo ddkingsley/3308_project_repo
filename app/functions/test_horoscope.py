@@ -39,19 +39,19 @@ class TextprocTestCase(unittest.TestCase):
         # check that such fortune exists in fortune database
         
         found = False
-        txtfile = file('love.txt')
+        txtfile = file('loveFortunes.txt')
         for line in datafile:
             if fortune in line:
                 found = True
                 break
         
-        txtfile = file('wealth.txt')
+        txtfile = file('wealthFortunes.txt')
         for line in datafile:
             if fortune in line:
                 found = True
                 break
                 
-        txtfile = file('health.txt')
+        txtfile = file('healthFortunes.txt')
         for line in datafile:
             if fortune in line:
                 found = True
