@@ -87,7 +87,7 @@ Test case Executed by: ______________
 |    2    |    Click on the “Horoscope” link at the top of the screen    |    Horoscope page loads    |         |         |         |
 |    3    |    Click on your Zodiac sign    |    User gets a personality trait line, and is asked what kind of fortune (s)he wants    |         |         |         |
 |    4    |    Click on a type of fortune    |    User gets a fortune of the kind selected, and is asked if (s)he wants another one    |         |         |         |
-|    5    |    Click on Yes or No    |    If Yes, page asks user to select a type of fortune. Return to Step 4    |         |         |         |
+|    5    |    Click on Yes or No    |    If Yes, page asks user to select a type of fortune. Return to Step 4. If No, page shows a mystic message and tells the user to keep exploring the site    |         |         |         |
 Pass/Fail______ Initial & Date______
 
 ## Test 5: Genie
