@@ -1,12 +1,89 @@
-* {
-	font-family: Arial;
+/*base css*/
+.base html{
+	margin: 0;
+	font-family: Helvetica, sans-serif;
 }
 
-body {
-	background-color: thistle;
+.base body{
+	padding: 0;
+	margin: 0;
+	background-color: #EFEFEF;
 }
 
-img {
+.base.navi{
+	background-color: #CAEBF2;
+}
+
+.base.dropbutton {
+	background-color: #FF3b3f;
+	color:white;
+	padding: 20px;
+	border:none;
+	font-weight: bold;
+  }
+  
+  .base.dropdown {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+  }
+  
+  .base.dropdownstuff {
+	display: none;
+	position: absolute;
+	background-color: #CAEBF2;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  .base.dropdownstuff a {
+	color: white;
+	padding: 20px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  .dropdownstuff a:hover {
+	  background-color: #FF3b3f;
+	}
+  
+  .base.dropdown:hover .dropdownstuff {
+	display: block;
+  }
+  
+  .base.dropdown:hover .dropbutton {
+	background-color: #CAEBF2;
+  }
+
+  .base.auth{
+	text-align: right;
+	float: right;
+	padding: 16px;
+}
+
+.base.auth a{
+	text-decoration: none;
+	margin-left: 16px;
+	margin-right: 16px;
+	text-transform: lowercase;
+	color: #FF3b3f;
+	font-weight: bold;
+}
+
+.base.arrowdown{
+	transform: rotate(45);
+	-webkit-transform: rotate(45deg);
+}
+
+
+/* home */
+.home{
+	text-align: center;
+}
+
+
+/* fortune cookie */
+#wholeCookie {
 	display: block;
 	width: 25%;
 	height: 25%;
@@ -24,7 +101,7 @@ img {
 	display: none;
 }
 
-button{
+.fortune button{
 	border-radius: 2em;
 	padding: 0.5em 2em;
 	color: White;
@@ -33,3 +110,4 @@ button{
 	font-weight: 500;
 	font-size: 20px;
 }
+

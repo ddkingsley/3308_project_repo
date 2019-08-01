@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html class="base">
 
-    <head>
+    <head class="base">
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
         
         {% if title %}
@@ -11,27 +11,36 @@
         {% endif %}
     </head>
 
-    <body>
-        <div>
-        <a href="{{ url_for('index') }}">Home</a>
-        <a href="{{ url_for('routes.cookie') }}">Fortune Cookie</a>
-        <a href="{{ url_for('routes.mystic9ball') }}">Mystic 9 Ball</a>
-        <a href="{{ url_for('routes.horoscope') }}">Horoscope</a>
-        <a href="{{ url_for('routes.genie') }}">Genie</a>
-        <a href="{{ url_for('routes.moodRing') }}">Mood Ring</a>
-        {% if g.user %}
-        <a href="{{ url_for('auth.logout') }}">Log Out</a>
-        {% else %} 
-        <a href="{{ url_for('auth.register') }}">Register</a>
-        <a href="{{ url_for('auth.login') }}">Log In</a>
-        {% endif %} 
+    <body class="base">
+    <div class="base navi">
+            <div class="base dropdown">
+                <button class="base dropbutton">Kismet<i class="base arrowdown"></i></button>
+                <div class="base dropdownstuff">
+                        <a href="{{ url_for('index') }}">Home</a>
+                        <a href="{{ url_for('routes.cookie') }}">Fortune Cookie</a>
+                        <a href="{{ url_for('routes.mystic9ball') }}">Mystic 9 Ball</a>
+                        <a href="{{ url_for('routes.horoscope') }}">Horoscope</a>
+                        <a href="{{ url_for('routes.genie') }}">Genie</a>
+                        <a href="{{ url_for('routes.moodRing') }}">Mood Ring</a>
+                </div>
+            </div>
+            <div class ="base auth">
+                {% if g.user %}
+                <a href="{{ url_for('auth.logout') }}">Log Out</a>
+                {% else %} 
+                <a href="{{ url_for('auth.register') }}">Register</a>
+                <a href="{{ url_for('auth.login') }}">Log In</a>
+                {% endif %} 
+            </div>
         </div>
-        <hr>
+
+        <div class="content">
         {% for message in get_flashed_messages() %}
         <div class="flash">{{ message }}</div>
         {% endfor %}
         
         {% block content %}{% endblock %}
+        </div>
         
         <script type="text/javascript" src="{{url_for('static', filename='js/cookie.js') }}"></script>
         <script type="text/javascript" src="{{ url_for('static', filename='js/mood.js') }}"></script>
