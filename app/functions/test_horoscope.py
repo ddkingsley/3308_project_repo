@@ -2,7 +2,7 @@
 # horoscope feature testing
 
 import unittest
-import horoscopeGenerator
+import horoscope
 
 
 class TextprocTestCase(unittest.TestCase):
@@ -21,37 +21,37 @@ class TextprocTestCase(unittest.TestCase):
     def tearDown(self):
         pass
 
-    """ tests for the personal traits generator """
+    """ test that the personal traits generator returns a string """
     def test_horoscopeTraits(self):
 
-        traitsLine = horoscope.horoscopeTraits()
-        self.assertTrue(type(traitsLine) is str)
+        traitsLine = horoscope.horoscopeTraits(self)
+        assert isinstance(traitsLine, str)
         self.assertTrue(len(traitsLine) > 0)
         
         
-    """ tests for the fortune generator """
+    """ test that the fortunes generator returns a string """
     def test_horoscopeFortuneGenerator(self):
-
-        fortune = horoscope.horoscopeFortuneGenerator()
-        self.assertTrue(type(fortune) is str)
+        
+        fortune = horoscope.horoscopeFortuneGenerator(self)
+        assert isinstance(fortune, str)
         self.assertTrue(len(fortune) > 0)
         
         # check that such fortune exists in fortune database
         
         found = False
-        txtfile = file('loveFortunes.txt')
+        txtfile = open('loveFortunes.txt')
         for line in txtfile:
             if fortune in line:
                 found = True
                 break
         
-        txtfile = file('wealthFortunes.txt')
+        txtfile = open('wealthFortunes.txt')
         for line in txtfile:
             if fortune in line:
                 found = True
                 break
                 
-        txtfile = file('healthFortunes.txt')
+        txtfile = open('healthFortunes.txt')
         for line in txtfile:
             if fortune in line:
                 found = True
