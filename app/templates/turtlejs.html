@@ -128,19 +128,22 @@ function component(width, height, color, x, y) {
 //var random_answer_index = Math.floor(Math.random() * answers_length)
 
 function victory_condition(block) {
-    if (block.x >= (area_width - block_width)) {
-        myGameArea.stop();
-        if (block.pc == 1) {
-            alert("Congratulations, your wish will surely come true!")
+    if (player_choice < 2) { //player choice will be 0 prior to picking a turtle, once a turtle is picked, player_choice will be 1, once a turtle finishes, player choice will be 2 until Reset() is called
+        if (block.x >= (area_width - block_width)) {
+            player_choice = 2;  //if player choice is 2 then that means that a turtle has finished, and in case of a tie, the turtle to be evaulated first wins, which is object_1
+            myGameArea.stop();
+            if (block.pc == 1) {
+                alert("Congratulations, your wish will surely come true!")
+            }
+             else {
+                alert("Sorry but your block did not win and your wish may not come true just yet")
+            }
+            //this would be where I would create a reset button to play again
+            resetButton = document.createElement('button')
+            resetButton.innerHTML = "Reset Game";
+            document.body.appendChild(resetButton);
+            resetButton.addEventListener('click', Reset)
         }
-        else {
-            alert("Sorry but your block did not win and your wish may not come true just yet")
-        }
-        //this would be where I would create a reset button to play again
-        resetButton = document.createElement('button')
-        resetButton.innerHTML = "Reset Game";
-        document.body.appendChild(resetButton);
-        resetButton.addEventListener('click', Reset)
     }
 }
 function Reset() {
