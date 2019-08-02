@@ -39,7 +39,8 @@ def horoscope():
 @bp.route('/Genie')
 #@login_required
 def genie():
-    return('make a wish!')
+    #return('make a wish!')
+    return render_template('turtlejs.html')
 
 @bp.route('/Mood Ring')
 #@login_required
