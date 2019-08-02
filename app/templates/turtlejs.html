@@ -5,7 +5,7 @@
 <style>
 canvas {
     border: 1px solid #d3d3d3;
-    background-color: #fafafa;
+    background-color: #B97A57;
 }
 </style>
 </head>
@@ -27,20 +27,28 @@ var area_width = 480;
 var area_height = 270;
 
 var turtle = new Image();
+var turtle2 = new Image();
+var flag = new Image();
 turtle.src = "{{url_for('static', filename='images/turtle.png') }}";
+turtle2.src = "{{url_for('static', filename='images/turtle2.png') }}";
+flag.src = "{{url_for('static', filename='images/flag.png') }}";
 //turtle.src = "turtle.png";
+//turtle2.src = "turtle2.png";
+//flag.src = "flag.png";
 
 function startGame() {
     myGameArea.init();
-    object_1 = new component(block_width, block_height, "red", 10, 37);
-    object_2 = new component(block_width, block_height, "blue", 10, 75);
-    object_3 = new component(block_width, block_height, "purple", 10, 115);
-    object_4 = new component(block_width, block_height, "yellow", 10, 155);
-    object_5 = new component(block_width, block_height, "pink", 10, 191);
-    Lines = new lines(area_width, 2, "black");
-    console.log(object_1.x);
-    console.log(area_width);
-    console.log("inside StartGame()")
+    //if refactoring, change the objects to a list so that you can iterate through it instead of keeping track of 5 separate objects
+    //more importantly, objects and lines need to match up better
+    object_1 = new component(block_width, block_height, "red", 10, 46);
+    object_2 = new component(block_width, block_height, "blue", 10, 86);
+    object_3 = new component(block_width, block_height, "purple", 10, 126);
+    object_4 = new component(block_width, block_height, "yellow", 10, 166);
+    object_5 = new component(block_width, block_height, "pink", 10, 206);
+    Lines = new lines(area_width, 2, "black", "#22B14C");
+    //console.log(object_1.x);
+    //console.log(area_width);
+    //console.log("inside StartGame()")
     object_1.update();
     object_2.update();
     object_3.update();
@@ -73,14 +81,19 @@ var myGameArea = {
         clearInterval(this.interval);
     }
 }
-function lines(width, height, color) {
+function lines(width, height, lcolor, bcolor) {
     this.width = width;
     this.height = height;
     this.update = function(){
         ctx = myGameArea.context;
-        ctx.fillStyle = color;
+        ctx.fillStyle = bcolor;
+        ctx.fillRect(0,0, this.width,40);
+        ctx.fillRect(0,240, this.width,area_height);
+        ctx.drawImage(flag,440, 0);
+        ctx.drawImage(flag,440, 240);
+        ctx.fillStyle = lcolor;
         for (i = 1; i < 7; i++) {
-            ctx.fillRect(0, (i*36), this.width, this.height);
+            ctx.fillRect(0, (i*40), this.width, this.height);
         }
         
     }
@@ -90,17 +103,23 @@ function component(width, height, color, x, y) {
     this.height = height;
     this.x = x;
     this.y = y;
+    this.yy = y; //this is the y coordinate for the color tag, not supposed to bounce
     this.pc = 0;
     this.update = function(){
         ctx = myGameArea.context;
         //ctx.fillStyle = color;
         //ctx.fillRect(this.x, this.y, this.width, this.height);
-        ctx.drawImage(turtle,this.x,this.y);
+        if (bounce_bool > 0) {
+            ctx.drawImage(turtle,this.x,this.y);
+        }
+        else {
+            ctx.drawImage(turtle2,this.x,this.y);
+        }
     },
     this.tag = function(){
         ctx = myGameArea.context;
         ctx.fillStyle = color;
-        ctx.fillRect(0, this.y, 10, this.height);
+        ctx.fillRect(0, this.yy, 10, this.height);
     }
 }
 //var random_answer_index = Math.floor(Math.random() * answers_length)
@@ -119,18 +138,12 @@ function victory_condition(block) {
         resetButton.innerHTML = "Reset Game";
         document.body.appendChild(resetButton);
         resetButton.addEventListener('click', Reset)
-        /*
-            answerButton = document.createElement('button')
-	        answerButton.innerHTML = "Give me ze answer!";
-	        document.body.appendChild(answerButton)
-	        answerButton.addEventListener('click', get_answer)
-        */
     }
 }
 function Reset() {
     player_choice = 0;
     myGameArea.clear();
-    startGame();
+    startGame(); //I think this creates new objects instead of reusing current objects. Might be a bit wasteful
     document.body.removeChild(resetButton);
 }
 
@@ -144,8 +157,9 @@ function Render() {
     object_4.x += Math.floor(Math.random() *3);
     object_5.x += Math.floor(Math.random() *3);
     */
-    bounce_bool = bounce_bool * -1;
-    object_1.x += Math.random();
+   //placing the objects into a list and iterating through it would probably be for the best
+    bounce_bool = bounce_bool * -1; //change y coordinates slightly to add bouncing effect
+    object_1.x += Math.random(); //add a random value between 0 and 1
     object_2.x += Math.random();
     object_3.x += Math.random();
     object_4.x += Math.random();
@@ -166,7 +180,7 @@ function Render() {
     object_4.tag();
     object_5.tag();
     Lines.update();
-    victory_condition(object_1);
+    victory_condition(object_1); //check for victory/game over
     victory_condition(object_2);
     victory_condition(object_3);
     victory_condition(object_4);
@@ -194,10 +208,7 @@ function choose_block(selection) {
         myGameArea.start();
     }
 }
-//<button onclick="moveup()">UP</button>
-//<button onclick="movedown()">DOWN</button>
-//<button onclick="moveleft()">LEFT</button>
-//<button onclick="moveright()">RIGHT</button>
+
 </script>
 
 <p>Pick your Turtle! Current options:</p>
