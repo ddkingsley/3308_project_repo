@@ -1,6 +1,8 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
-<head>
+<head> -->
+{% extends "base.html"  %}
+{% block content %}
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <style>
 canvas {
@@ -8,8 +10,9 @@ canvas {
     background-color: #B97A57;
 }
 </style>
-</head>
-<body onload="startGame()">
+<!--</head>-->
+<!--<body onload="startGame()"> -->
+<div id ="turtle_game" onload="startGame()">
 <script>
 //These are the racing blocks!
 var object_1;
@@ -218,6 +221,7 @@ function choose_block(selection) {
 <button onclick="choose_block(5)">Pink</button>
 <button onclick="choose_block(3)">Purple</button>
 
-
-</body>
-</html>
+</div>
+<!--</body>
+</html>-->
+{% endblock %}
