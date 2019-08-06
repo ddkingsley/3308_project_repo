@@ -4,7 +4,6 @@ from flask import url_for, request, redirect, render_template, Blueprint, g, ses
 
 from app.functions.cookie import getAFortune, getLuckyNumbers
 from app.auth import login_required
-from app.db import get_db
 
 bp = Blueprint('routes', __name__)
 
@@ -39,7 +38,6 @@ def horoscope():
 @bp.route('/Genie')
 #@login_required
 def genie():
-    #return('make a wish!')
     return render_template('turtlejs.html')
 
 @bp.route('/Mood Ring')
