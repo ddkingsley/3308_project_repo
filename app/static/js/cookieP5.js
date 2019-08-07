@@ -1,5 +1,5 @@
 function setup() {
-    createCanvas(200, 200).parent('canvasHolderCookie');;
+    createCanvas(200, 200).parent('canvasHolderCookie');
     a = 100;
   }
   
