@@ -1,7 +1,7 @@
 let r, g, b;
 
 function setup() {
-  createCanvas(720, 400).parent('canvasHolder');
+  createCanvas(720, 400).parent('canvasHolderMood');
   frameRate(1);
 }
 

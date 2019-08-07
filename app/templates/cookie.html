@@ -1,26 +1,31 @@
 {% extends "base.html"  %}
 {% block content %}
 
-    <div class="cookie" id="cookiePic">
-        <img id="wholeCookie" src="{{url_for('static', filename='images/wholeCookie.jpg') }}"/>
+    <div class="fortune container">
+        <div class="fortune" id="canvasHolderCookie" align="center">
+        </div>
+    </div>
+
+    <div class = "fortune" id="fortuneArea">
+    <div class="fortune">
+        <p class="fortune" id="theFortune">{{fortune}}</p>
     </div>
 
     <div class="fortune">
-    	<button id="fortuneButton" onclick="showFortune()">Get Fortune</button>
+        <p class="fortune" id="luckyNumber">Your lucky numbers are {{luckyNumber}}</p>
     </div>
-
-    </div class="fortune">
-        <p id="theFortune">{{fortune}}</p>
     </div>
 
     <div class="fortune">
-    	<p id="luckyNumber">Your lucky numbers are {{luckyNumber}}</p>
+    	<button class="fortune" id="fortuneButton" onclick="showFortune()">Get Fortune</button>
     </div>
 
     <br>
 
     <div class="fortune">
-        <a href="{{ url_for('routes.cookie') }}"><button>Get Another Cookie</button></a>
+        <a class="fortune" href="{{ url_for('routes.cookie') }}"><button>Get Another Cookie</button></a>
     </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/cookieP5.js') }}"></script>
 
 {% endblock %}
