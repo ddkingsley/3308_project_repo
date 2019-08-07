@@ -36,19 +36,19 @@ loveFor = ["art", "discovery", "nature", "having fun", "introspection", "intimac
 def horoscopeTraits(sign):
         
     if sign == "Aries" or "Leo" or "Sagittarius":
-        trait = str("You are " + random.choice(adverbs) + random.choice(fireTraits) + " person, with a love for " + random.choice(loveFor))
+        trait = str("You are " + random.choice(adverbs) + " " + random.choice(fireTraits) + " person, with a love for " + random.choice(loveFor))
         return trait
 
     elif sign == "Taurus" or "Virgo" or "Capricorn":
-        trait = str("You are " + random.choice(adverbs) + random.choice(earthTraits), " person, with a love for " + random.choice(loveFor))
+        trait = str("You are " + random.choice(adverbs) +" " + random.choice(earthTraits), " person, with a love for " + random.choice(loveFor))
         return trait
 
     elif sign == "Gemini" or "Libra" or "Aquarius": 
-        trait = str("You are " + random.choice(adverbs) + random.choice(airTraits), " person, with a love for " + random.choice(loveFor))
+        trait = str("You are " + random.choice(adverbs) + " " + random.choice(airTraits), " person, with a love for " + random.choice(loveFor))
         return trait
 
     elif sign == "Scorpio" or "Cancer" or "Pisces":
-        trait = str("You are " + random.choice(adverbs) + random.choice(waterTraits), " person, with a love for " + random.choice(loveFor))
+        trait = str("You are " + random.choice(adverbs) + " " + random.choice(waterTraits), " person, with a love for " + random.choice(loveFor))
         return trait
         
         
@@ -94,7 +94,7 @@ def driver(sign):
             break
         
 # start the conversation: ask for solar sign, give personalized statement, offer fortune types
-sign = (input("What's your solar sign?")).lower()    
-horoscopeTraits(sign)
-driver(sign)
+#sign = (input("What's your solar sign?")).lower()    
+#horoscopeTraits(sign)
+#driver(sign)
 

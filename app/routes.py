@@ -3,6 +3,7 @@ import random
 from flask import url_for, request, redirect, render_template, Blueprint, g, session
 
 from app.functions.cookie import getAFortune, getLuckyNumbers
+from app.functions.horoscope import horoscopeTraits
 from app.auth import login_required
 
 bp = Blueprint('routes', __name__)
@@ -31,9 +32,11 @@ def mystic9ball():
     return render_template('m9.html')
 
 @bp.route('/Horoscope')
-#@login_required
+@login_required
 def horoscope():
-	return('this is your horoscope')
+    zodiac = session['zodiac'].capitalize()
+    horoscope = horoscopeTraits(zodiac)
+    return(horoscope)
 
 @bp.route('/Genie')
 #@login_required
