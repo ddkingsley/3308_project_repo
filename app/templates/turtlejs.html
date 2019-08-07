@@ -12,7 +12,7 @@ canvas {
 </style>
 <!--</head>-->
 <!--<body onload="startGame()"> -->
-<div id ="turtle_game" onload="startGame()">
+
 <script>
 //These are the racing blocks!
 var object_1;
@@ -71,8 +71,8 @@ var myGameArea = {
         this.canvas.width = area_width;
         this.canvas.height = area_height;
         this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-
+        //document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        document.body.appendChild(this.canvas)
     },
     start : function() {
         this.interval = setInterval(Render, 10);
@@ -130,6 +130,7 @@ function component(width, height, color, x, y) {
 function victory_condition(block) {
     if (player_choice < 2) { //player choice will be 0 prior to picking a turtle, once a turtle is picked, player_choice will be 1, once a turtle finishes, player choice will be 2 until Reset() is called
         if (block.x >= (area_width - block_width)) {
+            turtle_text.textContent = "the " + block.name + " turtle is the winner!";
             player_choice = 2;  //if player choice is 2 then that means that a turtle has finished, and in case of a tie, the turtle to be evaulated first wins, which is object_1
             myGameArea.stop();
             if (block.pc == 1) {
@@ -149,6 +150,7 @@ function victory_condition(block) {
 function Reset() {
     player_choice = 0;
     myGameArea.clear();
+    turtle_text.textContent = "Pick your Turtle! Current options:";
     startGame(); //I think this creates new objects instead of reusing current objects. Might be a bit wasteful
     document.body.removeChild(resetButton);
 }
@@ -195,36 +197,42 @@ function Render() {
 function choose_block(selection) {
     //players can currently change their choice while game is running and have multiple blocks
     if (player_choice == 0) {
+        var turtle_text = document.getElementById("turtle_text");
         player_choice = 1; //player_choice acts as a busy signal to disable the buttons
         if (selection == 1) {
+            turtle_text.textContent = "you picked the " + object_1.name + " turtle, GO " + object_1.name + "!";
             object_1.pc = 1;
         }
         else if (selection == 2) {
+            turtle_text.textContent = "you picked the " + object_2.name + " turtle, GO " + object_2.name + "!";
             object_2.pc = 1;
         }
         else if (selection == 3) {
+            turtle_text.textContent = "you picked the " + object_3.name + " turtle, GO " + object_3.name + "!";
             object_3.pc = 1;
         }
         else if (selection == 4) {
+            turtle_text.textContent = "you picked the " + object_4.name + " turtle, GO " + object_4.name + "!";
             object_4.pc = 1;
         }
         else if (selection == 5) {
+            turtle_text.textContent = "you picked the " + object_5.name + " turtle, GO " + object_5.name + "!";
             object_5.pc = 1;
         }
         myGameArea.start();
     }
 }
-
+window.onload = startGame();
 </script>
-
-<p>Pick your Turtle! Current options:</p>
+<div id ="turtle_game"></div>
+<div id="turtle_text">Pick your Turtle! Current options:</div>
 <button onclick="choose_block(1)">Red</button>
 <button onclick="choose_block(2)">Blue</button>
 <button onclick="choose_block(4)">Yellow</button>
 <button onclick="choose_block(5)">Pink</button>
 <button onclick="choose_block(3)">Purple</button>
 
-</div>
+
 <!--</body>
 </html>-->
 {% endblock %}
