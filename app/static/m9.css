@@ -23,7 +23,7 @@ h1#result {
 	height : 100%;
 	border-radius : 50%;
 	border : 200px solid black;	/* can alter thickness and colour of circle on this line */
-	margin : 0;
+	margin : 10%;
 	padding : 0;
 }
 
