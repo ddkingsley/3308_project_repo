@@ -21,8 +21,9 @@
                         <a href="{{ url_for('routes.mystic9ball') }}">Mystic 9 Ball</a>
                         <a href="{{ url_for('routes.genie') }}">Genie</a>
                         <a href="{{ url_for('routes.moodRing') }}">Mood Ring</a>
-                        {% if g.user %}
                         <a href="{{ url_for('routes.horoscope') }}">Horoscope</a>
+                        {% if g.user %}
+                        <a href="{{ url_for('routes.advice') }}">Advice</a>
                         {% endif %} 
                 </div>
             </div>
