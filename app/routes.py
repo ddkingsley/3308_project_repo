@@ -54,6 +54,5 @@ def moodRing():
 @login_required
 def advice():
     advice = getAdvice()
-    return(advice)
-	#return render_template('advice.html', title = 'Advice')
+    return render_template('advice.html', advice=advice, title = 'Advice')
 

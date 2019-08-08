@@ -1,0 +1,12 @@
+{% extends "base.html"  %}
+{% block content %}
+
+<div class="advice">
+    <p class="advice" id="theAdvice">{{ advice }}</p>
+</div>
+
+<div class="advice">
+    <a class="advice" href="{{ url_for('routes.advice') }}"><button>Get More Advice</button></a>
+</div>
+
+{% endblock %}
