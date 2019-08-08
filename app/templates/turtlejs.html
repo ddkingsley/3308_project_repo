@@ -108,6 +108,7 @@ function component(width, height, color, x, y) {
     this.y = y;
     this.yy = y; //this is the y coordinate for the color tag, not supposed to bounce
     this.pc = 0;
+    this.name = color;
     this.update = function(){
         ctx = myGameArea.context;
         //ctx.fillStyle = color;
@@ -136,8 +137,8 @@ function victory_condition(block) {
             if (block.pc == 1) {
                 alert("Congratulations, your wish will surely come true!")
             }
-             else {
-                alert("Sorry but your block did not win and your wish may not come true just yet")
+            else {
+                alert("Sorry but your turtle did not win and your wish may not come true just yet")
             }
             //this would be where I would create a reset button to play again
             resetButton = document.createElement('button')
