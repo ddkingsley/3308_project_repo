@@ -32,7 +32,4 @@ pip install -r requirements.txt
 ## run flask locally
 flask run
 
-#########################################
-# Initialize local database
-flask init-db
 
