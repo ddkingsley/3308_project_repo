@@ -49,7 +49,8 @@ Our team includes 5 people, and we will organize from within our team. Kristin i
 We plan to use Trello to track our progress. We like this platform because it provides a very visual way of keeping virtual boards and lists with pending and completed tasks. It will also allow us to interact by adding comments on them to reflect obstacles, asking each other targeted questions in an organized way, and sharing useful links or attachments as needed. It is also good for assigning specific tasks to one team member or other, by creating individual lists on the main dashboard. We believe Trello will be a good tool for supporting our mitigation strategies of organizing tasks and working effectively as a team.
 
 **Sources**
-Flask tutorials:
+
+Flask tutorials:<br/>
 https://flask.palletsprojects.com/en/1.1.x/tutorial/<br/>
 https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world<br/>
 
