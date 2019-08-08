@@ -50,7 +50,7 @@ We plan to use Trello to track our progress. We like this platform because it pr
 
 **Sources**
 Flask tutorials:
-https://flask.palletsprojects.com/en/1.1.x/tutorial/
-https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+https://flask.palletsprojects.com/en/1.1.x/tutorial/<br/>
+https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world<br/>
 
 
