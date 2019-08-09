@@ -1,9 +1,13 @@
+<!--Base includes navigation to be added to all pages-->
 <!DOCTYPE html>
+
 <html class="base">
 
     <head class="base">
+        <!--Link main style sheet-->
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
         
+        <!--Default and custom titles-->
         {% if title %}
         <title>{{ title }} - Kismet</title>
         {% else %}
@@ -12,42 +16,52 @@
     </head>
 
     <body class="base">
-    <div class="base navi">
-            <div class="base dropdown">
-                <button class="base dropbutton">Kismet<i class="base arrowdown"></i></button>
-                <div class="base dropdownstuff">
-                        <a href="{{ url_for('index') }}">Home</a>
-                        <a href="{{ url_for('routes.cookie') }}">Fortune Cookie</a>
-                        <a href="{{ url_for('routes.mystic9ball') }}">Mystic 9 Ball</a>
-                        <a href="{{ url_for('routes.genie') }}">Genie</a>
-                        <a href="{{ url_for('routes.moodRing') }}">Mood Ring</a>
-                        <a href="{{ url_for('routes.horoscope') }}">Horoscope</a>
-                        {% if g.user %}
-                        <a href="{{ url_for('routes.advice') }}">Advice</a>
-                        {% endif %} 
-                </div>
-            </div>
-            <div class ="base auth">
-                {% if g.user %}
-                <a href="{{ url_for('auth.logout') }}">Log Out</a>
-                {% else %} 
-                <a href="{{ url_for('auth.register') }}">Register</a>
-                <a href="{{ url_for('auth.login') }}">Log In</a>
-                {% endif %} 
-            </div>
-        </div>
-
-        <div class="content">
-        {% for message in get_flashed_messages() %}
-        <div class="flash">{{ message }}</div>
-        {% endfor %}
         
-        {% block content %}{% endblock %}
-        </div>
-        <script type="text/javascript" src="{{ url_for('static', filename='js/p5.js') }}"></script>
-        <script type="text/javascript" src="{{ url_for('static', filename='js/p5.dom.js') }}"></script>
-        <script type="text/javascript" src="{{ url_for('static', filename='js/p5.sound.js') }}"></script>
-        <script type="text/javascript" src="{{url_for('static', filename='js/cookie.js') }}"></script>
+        <!--Navigation-->
+        <div class="base navi">
+                <div class="base dropdown">
+                    <button class="base dropbutton">Kismet<i class="base arrowdown"></i></button>
+                    <div class="base dropdownstuff">
+                            <!--Links to other pagess-->
+                            <a href="{{ url_for('index') }}">Home</a>
+                            <a href="{{ url_for('routes.cookie') }}">Fortune Cookie</a>
+                            <a href="{{ url_for('routes.mystic9ball') }}">Mystic 9 Ball</a>
+                            <a href="{{ url_for('routes.genie') }}">Genie</a>
+                            <a href="{{ url_for('routes.moodRing') }}">Mood Ring</a>
+                            <a href="{{ url_for('routes.horoscope') }}">Horoscope</a>
+                            {% if g.user %} <!--Only show link if logged in-->
+                            <a href="{{ url_for('routes.advice') }}">Advice</a>
+                            {% endif %} 
+                    </div>
+                </div>
+
+                <!--Links to auth pages-->
+                <div class ="base auth">
+                    {% if g.user %}
+                    <a href="{{ url_for('auth.logout') }}">Log Out</a>
+                    {% else %} 
+                    <a href="{{ url_for('auth.register') }}">Register</a>
+                    <a href="{{ url_for('auth.login') }}">Log In</a>
+                    {% endif %} 
+                </div>
+
+            </div>
+
+            <div class="content">
+            {% for message in get_flashed_messages() %}
+            <div class="flash">{{ message }}</div> <!--Show error messages here-->
+            {% endfor %}
+            
+            {% block content %}{% endblock %} <!--Where page content will go that extends base.html-->
+
+            </div>
+
+            <!--link js files-->
+            <script type="text/javascript" src="{{ url_for('static', filename='js/p5.js') }}"></script>
+            <script type="text/javascript" src="{{ url_for('static', filename='js/p5.dom.js') }}"></script>
+            <script type="text/javascript" src="{{ url_for('static', filename='js/p5.sound.js') }}"></script>
+            <script type="text/javascript" src="{{url_for('static', filename='js/cookie.js') }}"></script>
+
     </body>
 
 </html>

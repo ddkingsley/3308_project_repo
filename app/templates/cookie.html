@@ -1,31 +1,40 @@
+<!--Fortune cookies-->
+<!--Uses base.html-->
 {% extends "base.html"  %}
+
 {% block content %}
 
+    <!--Div to hold p5 animation-->
     <div class="fortune container">
         <div class="fortune" id="canvasHolderCookie" align="center">
         </div>
     </div>
 
     <div class = "fortune" id="fortuneArea">
-    <div class="fortune">
-        <p class="fortune" id="theFortune">{{fortune}}</p>
+    <!--Div where fortune will show-->
+        <div class="fortune">
+            <p class="fortune" id="theFortune">{{fortune}}</p>
+        </div>
+        
+        <!--Div where lucky numbers will show-->
+        <div class="fortune">
+            <p class="fortune" id="luckyNumber">Your lucky numbers are {{luckyNumber}}</p>
+        </div>
     </div>
 
-    <div class="fortune">
-        <p class="fortune" id="luckyNumber">Your lucky numbers are {{luckyNumber}}</p>
-    </div>
-    </div>
-
+    <!--Button to call function to show fortune information-->
     <div class="fortune">
     	<button class="fortune" id="fortuneButton" onclick="showFortune()">Get Fortune</button>
     </div>
 
     <br>
 
+    <!--Button to reload page-->
     <div class="fortune">
         <a class="fortune" href="{{ url_for('routes.cookie') }}"><button>Get Another Cookie</button></a>
     </div>
 
+    <!--script tag for p5.js-->
     <script type="text/javascript" src="{{ url_for('static', filename='js/cookieP5.js') }}"></script>
 
 {% endblock %}

@@ -1,10 +1,15 @@
+<!--Advice-->
+<!--Only seen by logged in users-->
 {% extends "base.html"  %}
+
 {% block content %}
 
+<!--Div to display advice-->
 <div class="advice">
     <p class="advice" id="theAdvice">{{ advice }}</p>
 </div>
 
+<!--Button to reload page-->
 <div class="advice">
     <a class="advice" href="{{ url_for('routes.advice') }}"><button>Get More Advice</button></a>
 </div>

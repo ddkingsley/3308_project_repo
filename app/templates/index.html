@@ -1,12 +1,16 @@
+<!--Home page-->
+<!--Uses base.html-->
 {% extends 'base.html' %}
 
 {% block content %}
+
 <div class="home">
     <h1>Hello, {{ user }}, this is the homepage!</h1>
-    {% if g.user %}
+    {% if g.user %} <!--Show zodiac sign if logged in-->
     <h2>Your zodiac sign is {{ zodiac }}</h2>
     {% else %}
     <h2>{{ zodiac }}</h2>
     {% endif %}
 </div> 
+
 {% endblock %}
