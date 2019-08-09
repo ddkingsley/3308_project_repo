@@ -1,0 +1,32 @@
+#format {
+    text-align: center;
+}
+
+#message {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1B283B;
+    text-align: center;
+}
+
+#colorText {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1B283B;
+
+    font-size: 20px;
+}
+
+#colorMeaning {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1B283B;
+    font-size: 20px;
+}
+
+.checkButton {
+    border-radius: 6px;
+	padding: 8px 16px;
+	color: White;
+	background-color: #1B283B;
+	font-weight: 500;
+	font-size: 16px;
+    cursor: pointer;
+}
