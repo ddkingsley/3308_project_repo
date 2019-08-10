@@ -6,19 +6,242 @@
     font-family: Arial, Helvetica, sans-serif;
     color: #1B283B;
     text-align: center;
+    font-size: 33px;
+    margin-bottom: 90px;
+}
+
+#black {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+ 
+    top: calc(50%-150px);
+    left: calc(50%-150px);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow:
+        inset 0 0 50px #fff,
+        inset 20px 0 80px rgb(0, 0, 0),
+        inset -20px 0 80px rgb(168, 168, 168),
+        inset 20px 0 300px rgb(0, 0, 0),
+        inset -20px 0 300px rgb(168, 168, 168),
+        0 0 50px #fff,
+        -10px 0 80px rgb(0, 0, 0),
+        10px 0 80px rgb(168, 168, 168);
+    margin-bottom: 75px;
+}
+
+#yellow {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+ 
+    top: calc(50%-150px);
+    left: calc(50%-150px);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow:
+        inset 0 0 50px #fff,
+        inset 20px 0 80px rgb(255, 217, 0),
+        inset -20px 0 80px rgb(252, 243, 122),
+        inset 20px 0 300px rgb(255, 217, 0),
+        inset -20px 0 300px rgb(252, 243, 122),
+        0 0 50px #fff,
+        -10px 0 80px rgb(255, 217, 0),
+        10px 0 80px rgb(252, 243, 122);
+    margin-bottom: 75px;
+}
+
+#orange {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+ 
+    top: calc(50%-150px);
+    left: calc(50%-150px);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow:
+        inset 0 0 50px #fff,
+        inset 20px 0 80px rgb(226, 102, 0),
+        inset -20px 0 80px rgb(231, 160, 101),
+        inset 20px 0 300px rgb(226, 102, 0),
+        inset -20px 0 300px rgb(231, 160, 101),
+        0 0 50px #fff,
+        -10px 0 80px rgb(226, 102, 0),
+        10px 0 80px rgb(231, 160, 101);
+    margin-bottom: 75px;
+}
+
+#lGreen {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+ 
+    top: calc(50%-150px);
+    left: calc(50%-150px);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow:
+        inset 0 0 50px #fff,
+        inset 20px 0 80px rgb(74, 224, 94),
+        inset -20px 0 80px rgb(180, 226, 170),
+        inset 20px 0 300px rgb(74, 224, 94),
+        inset -20px 0 300px rgb(180, 226, 170),
+        0 0 50px #fff,
+        -10px 0 80px rgb(74, 224, 94),
+        10px 0 80px rgb(180, 226, 170);
+    margin-bottom: 75px;
+}
+
+#green {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+ 
+    top: calc(50%-150px);
+    left: calc(50%-150px);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow:
+        inset 0 0 50px #fff,
+        inset 20px 0 80px rgb(12, 112, 65),
+        inset -20px 0 80px rgb(31, 161, 90),
+        inset 20px 0 300px rgb(12, 112, 65),
+        inset -20px 0 300px rgb(31, 161, 90),
+        0 0 50px #fff,
+        -10px 0 80px rgb(12, 112, 65),
+        10px 0 80px rgb(31, 161, 90);
+    margin-bottom: 75px;
+}
+
+#blue {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+ 
+    top: calc(50%-150px);
+    left: calc(50%-150px);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow:
+        inset 0 0 50px #fff,
+        inset 20px 0 80px blue,
+        inset -20px 0 80px lightblue,
+        inset 20px 0 300px blue,
+        inset -20px 0 300px lightblue,
+        0 0 50px #fff,
+        -10px 0 80px blue,
+        10px 0 80px lightblue;
+    margin-bottom: 75px;
+}
+
+#default {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ 
+    top: calc(50%-150px);
+    left: calc(50%-150px);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow:
+        inset 0 0 50px #fff,
+        inset 20px 0 80px #f0f,
+        inset -20px 0 80px #0ff,
+        inset 20px 0 300px #f0f,
+        inset -20px 0 300px #0ff,
+        0 0 50px #fff,
+        -10px 0 80px #f0f,
+        10px 0 80px #0ff;
+    margin-bottom: 75px;
+}
+
+#dBlue {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+ 
+    top: calc(50%-150px);
+    left: calc(50%-150px);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow:
+        inset 0 0 50px #fff,
+        inset 20px 0 80px navy,
+        inset -20px 0 80px blue,
+        inset 20px 0 300px navy,
+        inset -20px 0 300px blue,
+        0 0 50px #fff,
+        -10px 0 80px navy,
+        10px 0 80px blue;
+    margin-bottom: 75px;
+}
+
+#violet {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+ 
+    top: calc(50%-150px);
+    left: calc(50%-150px);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow:
+        inset 0 0 50px #fff,
+        inset 20px 0 80px rgb(68, 18, 148),
+        inset -20px 0 80px rgb(198, 178, 221),
+        inset 20px 0 300px rgb(68, 18, 148),
+        inset -20px 0 300px rgb(198, 178, 221),
+        0 0 50px #fff,
+        -10px 0 80px rgb(68, 18, 148),
+        10px 0 80px rgb(198, 178, 221);
+    margin-bottom: 75px;
+}
+
+#pink {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+ 
+    top: calc(50%-150px);
+    left: calc(50%-150px);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow:
+        inset 0 0 50px #fff,
+        inset 20px 0 80px magenta,
+        inset -20px 0 80px lightpink,
+        inset 20px 0 300px magenta,
+        inset -20px 0 300px lightpink,
+        0 0 50px #fff,
+        -10px 0 80px magenta,
+        10px 0 80px lightpink;
+    margin-bottom: 75px;
 }
 
 #colorText {
     font-family: Arial, Helvetica, sans-serif;
     color: #1B283B;
-
-    font-size: 20px;
+    margin-top: 100px;
+    font-size: 24px;
 }
 
 #colorMeaning {
     font-family: Arial, Helvetica, sans-serif;
     color: #1B283B;
-    font-size: 20px;
+    font-size: 24px;
+    margin-top: 15px;
 }
 
 .checkButton {
@@ -27,6 +250,27 @@
 	color: White;
 	background-color: #1B283B;
 	font-weight: 500;
-	font-size: 16px;
+	font-size: 18px;
     cursor: pointer;
+    margin-top: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resetButton {
+    border-radius: 6px;
+	padding: 8px 16px;
+	color: White;
+	background-color: #1B283B;
+	font-weight: 500;
+	font-size: 18px;
+    cursor: pointer;
+    margin-top: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
 }
