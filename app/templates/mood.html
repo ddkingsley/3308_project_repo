@@ -5,25 +5,25 @@
         <script type="text/javascript" src="{{url_for('static', filename='js/mood.js') }}"></script>
     </head>
 
-
-
     <h1 id="message">The Mood Ring will change color based on your emotional energy. </h1>
 
-
-    <div class="container">
-    	<div id="canvasHolderMood" align="center"></div>
-    </div>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/moodP5.js') }}"></script>
-
-
+        <div id = "default"></div> 
+        <div id = "black"></div> 
+        <div id = "yellow"></div>       
+        <div id = "orange"></div> 
+        <div id = "lGreen"></div> 
+        <div id = "green"></div> 
+        <div id = "blue"></div> 
+        <div id = "dBlue"></div> 
+        <div id = "violet"></div> 
+ 
+        <div id = "pink"></div>       
     <div id = "format">
-
     <div id = "colorText"></div>
     <div id = "colorMeaning"></div>
 
     <button class="checkButton">Check Ring</button>
+    <button class="resetButton">Try again?</button>
     </div>
-
-
 
 {% endblock %}
