@@ -43,7 +43,7 @@ function get_mood() {
     if (answer.textContent == ringColors[1])
     {
         var yellowRing = document.getElementById("yellow");
-        defaultRing.style.display = "block";
+        yellowRing.style.display = "block";
         meaning.textContent = "Your emotions are mixed or conflicted. You may feel distracted or slightly anxious.";
     }
     // Orange
