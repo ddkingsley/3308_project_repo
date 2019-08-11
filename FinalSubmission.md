@@ -1,6 +1,7 @@
 # Kismet
+------
 
-##### Team: 
+##### Team Members: 
 Florencia Cabral
 Greg Giordano
 Kristin Kernler
