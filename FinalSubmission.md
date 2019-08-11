@@ -1,11 +1,11 @@
 # Kismet
 
 ##### Team Members: 
-Florencia Cabral
-Greg Giordano
-Kristin Kernler
-Daniel Kingsley
-Carter Reid
+Florencia Cabral</br> 
+Greg Giordano</br> 
+Kristin Kernler</br> 
+Daniel Kingsley</br> 
+Carter Reid</br> 
 
 ##### Project Tracker:
 [Kismet Trello Board](https://trello.com/b/DmUT89Kf/kismet-development)
