@@ -56,4 +56,7 @@ Flask tutorials:<br/>
 https://flask.palletsprojects.com/en/1.1.x/tutorial/<br/>
 https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world<br/>
 
+Mood Ring:<br/>
+https://www.colorpsychology.org/mood-ring-colors/<br/>
+
 
