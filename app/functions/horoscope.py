@@ -53,9 +53,7 @@ def horoscopeTraits(sign):
         
         
 # gets wealth, health, or love fortunes
-def horoscopeFortuneGenerator(sign):
-
-    fortune = (input("Love, Health, Wealth, or Describe Me?")).lower()
+def horoscopeFortuneGenerator(fortune):
 
     if fortune == "health":
         healthFortune = open("healthFortunes.txt").readlines()
@@ -72,9 +70,6 @@ def horoscopeFortuneGenerator(sign):
         yourFortune = random.choice(loveFortune)
         return yourFortune
     
-    elif fortune == "describe me":
-        return horoscopeTraits(sign)
-
 # calls the fortune generator and keeps up the dialogue
 def driver(sign):
     

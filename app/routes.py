@@ -37,11 +37,12 @@ def mystic9ball():
 #Horoscope
 @bp.route('/Horoscope')
 def horoscope():
-    #zodiac = session['zodiac'].capitalize()
-    #horoscope = horoscopeTraits(zodiac)
-    #return(horoscope)
-    return('This is your horoscope')
-
+    if request.method == 'POST':
+        sign = request.form['zodiac']
+	fortune = request.form['fortunes']
+	horoscope = horoscopeFortuneGenerator(fortune)
+	trait = horoscopeTraits(sign)
+    
 #Genie
 @bp.route('/Genie')
 def genie():
