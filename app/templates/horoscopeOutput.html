@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<p>{{ horoscope }} </p>
+<p>{{ trait }} </p>
+<!--Button to reload page-->
+<div class="horoscope">
+    <a class="horoscope" href="{{ url_for('routes.horoscope') }}"><button>Get Another Horoscope</button></a>
+</div>
+{% endblock %}

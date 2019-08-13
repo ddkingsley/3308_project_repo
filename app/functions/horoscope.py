@@ -56,17 +56,17 @@ def horoscopeTraits(sign):
 def horoscopeFortuneGenerator(fortune):
 
     if fortune == "health":
-        healthFortune = open("healthFortunes.txt").readlines()
+        healthFortune = open("app/functions/healthFortunes.txt").readlines()
         yourFortune = random.choice(healthFortune)
         return str(yourFortune)
 
     elif fortune == "wealth":
-        wealthFortune = open("wealthFortunes.txt").readlines()
+        wealthFortune = open("app/functions/wealthFortunes.txt").readlines()
         yourFortune = random.choice(wealthFortune)
         return yourFortune
 
     elif fortune == "love":
-        loveFortune = open("loveFortunes.txt").readlines()
+        loveFortune = open("app/functions/loveFortunes.txt").readlines()
         yourFortune = random.choice(loveFortune)
         return yourFortune
     

@@ -3,7 +3,7 @@ import random
 from flask import url_for, request, redirect, render_template, Blueprint, g, session
 
 from app.functions.cookie import getAFortune, getLuckyNumbers
-from app.functions.horoscope import horoscopeTraits
+from app.functions.horoscope import horoscopeTraits, horoscopeFortuneGenerator
 from app.functions.advice import getAdvice
 from app.auth import login_required
 
@@ -35,13 +35,16 @@ def mystic9ball():
     return render_template('m9.html', title = 'Mystic 9-Ball')
 
 #Horoscope
-@bp.route('/Horoscope')
+@bp.route('/Horoscope', methods =['POST', 'GET'])
 def horoscope():
     if request.method == 'POST':
         sign = request.form['zodiac']
-	fortune = request.form['fortunes']
-	horoscope = horoscopeFortuneGenerator(fortune)
-	trait = horoscopeTraits(sign)
+        fortune = request.form['fortunes']
+        horoscope = horoscopeFortuneGenerator(fortune)
+        trait = horoscopeTraits(sign)
+        return render_template('horoscopeOutput.html', horoscope=horoscope, trait=trait, title = 'Horoscope')
+
+    return render_template('horoscope.html', title='Horoscope')
     
 #Genie
 @bp.route('/Genie')
