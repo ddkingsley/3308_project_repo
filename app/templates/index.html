@@ -11,6 +11,54 @@
     {% else %}
     <h2>{{ zodiac }}</h2>
     {% endif %}
+
+    {% if zodiac == 'aquarius'%}
+    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Aquarius.svg.png') }}"/>
+    {% endif %}
+
+    {% if zodiac == 'aries'%}
+    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Aries.png') }}"/>
+    {% endif %}
+
+    {% if zodiac == 'cancer'%}
+    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Cancer.png') }}"/>
+    {% endif %}
+
+    {% if zodiac == 'capricorn'%}
+    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Capricorn.png') }}"/>
+    {% endif %}
+
+    {% if zodiac == 'gemini'%}
+    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Gemini.png') }}"/>
+    {% endif %}
+
+    {% if zodiac == 'leo'%}
+    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Leo.png') }}"/>
+    {% endif %}
+
+    {% if zodiac == 'libra'%}
+    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Libra.png') }}"/>
+    {% endif %}
+
+    {% if zodiac == 'pisces'%}
+    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Pisces.svg.png') }}"/>
+    {% endif %}
+
+    {% if zodiac == 'sagittarius'%}
+    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Sagittarius.svg.png') }}"/>
+    {% endif %}
+
+    {% if zodiac == 'scorpio'%}
+    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Scorpio.png') }}"/>
+    {% endif %}
+
+    {% if zodiac == 'taurus'%}
+    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Taurus.png') }}"/>
+    {% endif %}
+
+    {% if zodiac == 'virgo'%}
+    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Virgo.svg.png') }}"/>
+    {% endif %}
 </div> 
 
 {% endblock %}
