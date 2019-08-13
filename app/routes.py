@@ -19,7 +19,7 @@ def index():
         zodiac = session['zodiac']
     else: #if not logged in
         user = 'New Person'
-        zodiac = 'Register an account for zodiac information'
+        zodiac = 'Register an account today'
     return render_template('index.html',user=user, zodiac=zodiac)
 
 #fortune cookie
