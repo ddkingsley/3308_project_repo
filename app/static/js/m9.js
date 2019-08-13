@@ -31,9 +31,9 @@ function reset() {
   document.body.appendChild(answerButton)
   answerButton.addEventListener('click', get_answer)
 }
-const mystic_answers = ["Better not tell you now", "Yes", "Definitly", "Maybe", "No, but you're on the right track", 
+const mystic_answers = ["Better not tell you now", "Yes", "Definitely", "Maybe", "No, but you're on the right track", 
 "Not a chance!", "I guess so", "42", "Nein!", "I'm picking up on something involving carrots, are you sure you're concentrating hard enough?",
-"cosmic energies are telling me... no", "Does a bear deficate in the woods?", "I think you already know the answer"];
+"Cosmic energies are telling me... no", "Does a bear deficate in the woods?", "I think you already know the answer"];
 function generate_answer() {
 	var answers_length = mystic_answers.length;
 	var random_answer_index = Math.floor(Math.random() * answers_length) 
