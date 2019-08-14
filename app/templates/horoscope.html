@@ -9,17 +9,8 @@
         <img id="signs" src="{{url_for('static', filename='images/horoscopePic.jpeg') }}"/>
     </div>
 
-    <div class = "horoscope" id="horoscopeArea">
-    <!--Div where fortune will show-->
-        <div class="horoscope">
-            <p class="horoscope" id="theHoroscope">{{horoscope}}</p>
-        </div>
-
   <form method="post" class="sign">
-      
-            <h3>
-         What's your solar sign?
-          </h3>
+    <h3>What's your solar sign?</h3>
     <input type="radio" name="zodiac" value="aquarius" required>Aquarius<br>
     <input type="radio" name="zodiac" value="pisces" required>Pisces<br>
     <input type="radio" name="zodiac" value="aries" required>Aries<br>
@@ -32,11 +23,8 @@
     <input type="radio" name="zodiac" value="scorpio" required>Scorpio<br>
     <input type="radio" name="zodiac" value="sagittarius" required>Sagittarius<br>
     <input type="radio" name="zodiac" value="capricorn" required>Capricorn<br>
-<br>
-      <h3>
-         Pick your Fortune!
-          </h3>
-      
+    <br>
+    <h3>Pick your Fortune!</h3>
     <input type="radio" name="fortunes" value="health" required>Health<br>
     <input type="radio" name="fortunes" value="wealth" required>Wealth<br>
     <input type="radio" name="fortunes" value="love" required>Love<br>
@@ -44,10 +32,5 @@
   </form>
         
     <br>
-
-    <!--Button to reload page-->
-    <div class="horoscope">
-        <a class="horoscope" href="{{ url_for('routes.horoscope') }}"><button>Get Another Horoscope</button></a>
-    </div>
 
 {% endblock %}

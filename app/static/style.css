@@ -84,9 +84,36 @@
 
 
 /* home */
-.home{
+.container {
 	font-family: Arial, Helvetica, sans-serif;
-	text-align: center;
+    padding: 1%;
+    text-align: center;
+    width: 90%;  
+}
+
+.welcome{
+	display: inline-block;    
+	padding: 1%;  
+	vertical-align: 5px;
+}
+
+.k{
+	margin-top: 0px;
+	display: inline-block;    
+	height: 10px;  
+}
+
+#bigK{
+	font-size: 60px;
+    color: white;
+    text-align: left;
+    line-height: 75%;
+	background-color: #1B283B;
+	border-radius: 8px;
+}
+
+#left, #right{
+	color: #656390;
 }
 
 
@@ -211,4 +238,14 @@
 	padding: 3%;
 	background-color: white;
 	margin-top: 5px;
+}
+
+/* fortune */
+.fortune.sign.submit{
+	border-radius: 6px;
+	padding: 8px 16px;
+	color: White;
+	background-color: #1B283B;
+	font-weight: 500;
+	font-size: 16px;
 }
