@@ -88,7 +88,8 @@
 	font-family: Arial, Helvetica, sans-serif;
     padding: 1%;
     text-align: center;
-    width: 90%;  
+	width: 90%;  
+	margin: auto;
 }
 
 .welcome{
@@ -240,13 +241,43 @@
 	margin-top: 5px;
 }
 
-/* fortune */
-.fortune.sign.submit{
+/* horoscope */
+#horoscopeButton{
 	border-radius: 6px;
 	padding: 8px 16px;
 	color: White;
 	background-color: #1B283B;
 	font-weight: 500;
 	font-size: 16px;
+	margin-top: 10px;
+}
+
+.horoscope, .sign{
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+.horoscope p{
+	font-size: 16px;
+}
+
+.horoscope button{
+	border-radius: 6px;
+	padding: 8px 16px;
+	color: White;
+	background-color: #1B283B;
+	font-weight: 500;
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+#signs{
+	width: 30%;
+	height: auto;
+}
+
+#horoscopePic{
+	text-align: center;
+	margin-top: 10px;
 }
 
