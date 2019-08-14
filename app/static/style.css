@@ -84,9 +84,35 @@
 
 
 /* home */
-.home{
+.container {
 	font-family: Arial, Helvetica, sans-serif;
-	text-align: center;
+    padding: 1%;
+    text-align: center;
+    width: 90%;  
+}
+
+.welcome{
+	display: inline-block;    
+	padding: 1%;  
+	vertical-align: 5px;
+}
+
+.k{
+	margin-top: 0px;
+	display: inline-block;    
+	height: 10px;  
+}
+
+#bigK{
+	font-size: 60px;
+    color: white;
+    text-align: left;
+    line-height: 75%;
+    background-color: #1B283B;
+}
+
+#left, #right{
+	color: #656390;
 }
 
 

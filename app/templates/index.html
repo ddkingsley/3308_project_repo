@@ -4,62 +4,74 @@
 
 {% block content %}
 
-<div class="home">
-    {% if g.user %} <!--Show zodiac sign if logged in-->
-    <h1>Welcome to Kismet, {{ user }}!</h1>
-    <h2>Your zodiac sign is {{ zodiac }}</h2>
-    {% else %}
-    <h1>Welcome to Kismet!</h1>
-    <h2>{{ zodiac }}</h2>
-    {% endif %}
+<div class="container">
 
-    {% if zodiac == 'aquarius'%}
-    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Aquarius.svg.png') }}"/>
-    {% endif %}
+    <div class="k">
+            <h1 id="bigK"><span id="left">&lt;</span>kis<br>met<span id="right">&gt;</span></h1>
+    </div>
 
-    {% if zodiac == 'aries'%}
-    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Aries.png') }}"/>
-    {% endif %}
+    <div class="welcome">
+        {% if g.user %} <!--Show zodiac sign if logged in-->
+        <h1>Welcome to Kismet, {{ user }}!</h1>
+        <h2>Your zodiac sign is {{ zodiac }}</h2>
+        {% else %}
+        <h1>Welcome to Kismet!</h1>
+        <h2>{{ zodiac }}</h2>
+        {% endif %}
+    </div>
 
-    {% if zodiac == 'cancer'%}
-    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Cancer.png') }}"/>
-    {% endif %}
+    <div class="pic">
+        
+        {% if zodiac == 'aquarius'%}
+        <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Aquarius.svg.png') }}"/>
+        {% endif %}
 
-    {% if zodiac == 'capricorn'%}
-    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Capricorn.png') }}"/>
-    {% endif %}
+        {% if zodiac == 'aries'%}
+        <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Aries.png') }}"/>
+        {% endif %}
 
-    {% if zodiac == 'gemini'%}
-    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Gemini.png') }}"/>
-    {% endif %}
+        {% if zodiac == 'cancer'%}
+        <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Cancer.png') }}"/>
+        {% endif %}
 
-    {% if zodiac == 'leo'%}
-    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Leo.png') }}"/>
-    {% endif %}
+        {% if zodiac == 'capricorn'%}
+        <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Capricorn.png') }}"/>
+        {% endif %}
 
-    {% if zodiac == 'libra'%}
-    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Libra.png') }}"/>
-    {% endif %}
+        {% if zodiac == 'gemini'%}
+        <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Gemini.png') }}"/>
+        {% endif %}
 
-    {% if zodiac == 'pisces'%}
-    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Pisces.svg.png') }}"/>
-    {% endif %}
+        {% if zodiac == 'leo'%}
+        <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Leo.png') }}"/>
+        {% endif %}
 
-    {% if zodiac == 'sagittarius'%}
-    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Sagittarius.svg.png') }}"/>
-    {% endif %}
+        {% if zodiac == 'libra'%}
+        <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Libra.png') }}"/>
+        {% endif %}
 
-    {% if zodiac == 'scorpio'%}
-    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Scorpio.png') }}"/>
-    {% endif %}
+        {% if zodiac == 'pisces'%}
+        <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Pisces.svg.png') }}"/>
+        {% endif %}
 
-    {% if zodiac == 'taurus'%}
-    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Taurus.png') }}"/>
-    {% endif %}
+        {% if zodiac == 'sagittarius'%}
+        <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Sagittarius.svg.png') }}"/>
+        {% endif %}
 
-    {% if zodiac == 'virgo'%}
-    <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Virgo.svg.png') }}"/>
-    {% endif %}
-</div> 
+        {% if zodiac == 'scorpio'%}
+        <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Scorpio.png') }}"/>
+        {% endif %}
+
+        {% if zodiac == 'taurus'%}
+        <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Taurus.png') }}"/>
+        {% endif %}
+
+        {% if zodiac == 'virgo'%}
+        <img class="zod" style="width: 100px; height:auto;" src="{{url_for('static', filename='images/Virgo.svg.png') }}"/>
+        {% endif %}
+
+    </div> 
+
+</div>
 
 {% endblock %}
