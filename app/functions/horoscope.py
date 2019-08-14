@@ -58,17 +58,17 @@ def horoscopeFortuneGenerator(fortune):
     if fortune == "health":
         healthFortune = open("app/functions/healthFortunes.txt").readlines()
         yourFortune = random.choice(healthFortune)
-        return str(yourFortune)
+        return str("Here is your fortune:" + "\n\n" + yourFortune)
 
     elif fortune == "wealth":
         wealthFortune = open("app/functions/wealthFortunes.txt").readlines()
         yourFortune = random.choice(wealthFortune)
-        return yourFortune
+        return str("Here is your fortune:" + "\n\n" + yourFortune)
 
     elif fortune == "love":
         loveFortune = open("app/functions/loveFortunes.txt").readlines()
         yourFortune = random.choice(loveFortune)
-        return yourFortune
+        return str("Here is your fortune:" + "\n\n" + yourFortune)
     
 # calls the fortune generator and keeps up the dialogue
 def driver(sign):
