@@ -108,7 +108,8 @@
     color: white;
     text-align: left;
     line-height: 75%;
-    background-color: #1B283B;
+	background-color: #1B283B;
+	border-radius: 8px;
 }
 
 #left, #right{
