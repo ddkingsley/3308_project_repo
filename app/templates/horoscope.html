@@ -5,9 +5,9 @@
 {% block content %}
 
 
-     <div id="horoscopePic">
-        <img id="signs" src="{{url_for('static', filename='images/horoscopePic.jpeg') }}"/>
-    </div>
+  <div id="horoscopePic">
+      <img id="signs" src="{{url_for('static', filename='images/horoscopePic.jpeg') }}"/>
+  </div>
 
   <form method="post" class="sign">
     <h3>What's your solar sign?</h3>
@@ -30,6 +30,8 @@
     <input type="radio" name="fortunes" value="love" required>Love<br>
     <br>
     <input class="fortune sign submit" type="submit" value="See your fortune!">
+    <input id="horoscopeButton" type="submit" value="See your fortune!">
+
   </form>
         
     <br>
