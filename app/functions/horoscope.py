@@ -36,7 +36,7 @@ loveFor = ["art", "discovery", "nature", "having fun", "introspection", "intimac
 def horoscopeTraits(sign):
         
     if sign == "Aries" or "Leo" or "Sagittarius":
-        trait = str("A little about you..." + "\n\n" + "You are " + random.choice(adverbs) + " " + random.choice(fireTraits) + " person, with a love for " + random.choice(loveFor))
+        trait = str("A little about you...\n\n" + "You are " + random.choice(adverbs) + " " + random.choice(fireTraits) + " person, with a love for " + random.choice(loveFor))
         return trait
 
     elif sign == "Taurus" or "Virgo" or "Capricorn":
