@@ -40,8 +40,8 @@ def horoscope():
     if request.method == 'POST':
         sign = request.form['zodiac']
         fortune = request.form['fortunes']
-        horoscope = horoscopeFortuneGenerator(fortune)
         trait = horoscopeTraits(sign)
+	horoscope = horoscopeFortuneGenerator(fortune)
         return render_template('horoscopeOutput.html', horoscope=horoscope, trait=trait, title = 'Horoscope')
 
     return render_template('horoscope.html', title='Horoscope')
