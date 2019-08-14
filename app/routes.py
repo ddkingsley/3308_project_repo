@@ -41,7 +41,7 @@ def horoscope():
         sign = request.form['zodiac']
         fortune = request.form['fortunes']
         trait = horoscopeTraits(sign)
-	horoscope = horoscopeFortuneGenerator(fortune)
+        horoscope = horoscopeFortuneGenerator(fortune)
         return render_template('horoscopeOutput.html', horoscope=horoscope, trait=trait, title = 'Horoscope')
 
     return render_template('horoscope.html', title='Horoscope')
